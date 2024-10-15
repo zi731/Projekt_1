@@ -1,5 +1,5 @@
-#include <iostream>
 #include "lis.h"
+#include <iostream>
 
 lista::lista(void) {
     roz = 0;

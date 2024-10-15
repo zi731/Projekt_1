@@ -1,5 +1,6 @@
-#include <iostream>
 #include "lis.h"
+#include <iostream>
+
 
 int main(int argc, char const *argv[]) {
     lista li;
