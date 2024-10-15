@@ -1,5 +1,3 @@
-#include <iostream>
-
 struct elem {
     int war;
     elem *nas;
