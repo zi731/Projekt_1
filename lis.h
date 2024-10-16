@@ -21,5 +21,7 @@ public:
     elem *usuind(int i);
     void wyswietl();
     void odwrot();
+    void zwrotnas(int i);
+    void zwrotpop(int i);
     void wyczy();
 };

@@ -124,6 +124,18 @@ void lista::odwrot() {
     }
 }
 
+void lista::zwrotnas(int i) {
+    elem *a = new elem;
+    a = zwrot(i + 1);
+    std::cout << a->war << "\n";
+}
+
+void lista::zwrotpop(int i) {
+    elem *a = new elem;
+    a = zwrot(i - 1);
+    std::cout << a->war << "\n";
+}
+
 void lista::wyczy() {
     elem *a;
     while(prz) {

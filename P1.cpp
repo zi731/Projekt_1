@@ -24,8 +24,10 @@ int main(int argc, char const *argv[]) {
     std::cout << "Usuniecie z listy trzeciej liczby:\n";
     li.usuind(3);
     li.wyswietl();
-    std::cout << "Wypisanie listy od tylu:\n";
+    std::cout << "Wyswietlenie listy od tylu:\n";
     li.odwrot();
+    std::cout << "Wartosc elementu po drugim: ", li.zwrotnas(2);
+    std::cout << "Wartosc elementu przed drugim: ", li.zwrotpop(2);
     std::cout << "Wyczyszczenie listy:\n";
     li.wyczy();
     li.wyswietl();
