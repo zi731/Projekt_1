@@ -9,16 +9,9 @@ lista::lista(void) {
 
 elem *lista::zwrot(int i) {
     elem *a;
-    if((i <= 0) || (i > roz)) return NULL;
+    if((i < 1) || (i > roz)) return NULL;
     else if(i == roz) return tyl;
-    else if(i < roz / 2) {
-        a = prz;
-        while(i > 0) {
-            a = a->nas;
-            i--;
-        }
-        return a;
-    }
+    else if(i == 1) return prz;
     else {
         a = tyl;
         while(i < roz) {

@@ -7,7 +7,8 @@ struct elem {
 class lista {
 private:
     int roz;
-    elem *prz, *tyl;
+    elem *prz;
+    elem *tyl;
 public:
     lista(void);
     ~lista() {}
