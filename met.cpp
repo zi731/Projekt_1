@@ -50,7 +50,7 @@ elem *lista::dodind(int i, int j) {
     if (j > roz) return NULL;
     elem *a = new elem;
     a->war = i;
-    elem *b = zwrot(j - 1);
+    elem *b = zwrot(j);
     a->nas = b;
     a->pop = b->pop;
     b->pop = a;
@@ -89,7 +89,7 @@ elem *lista::usutyl() {
 }
 
 elem *lista::usuind(int i) {
-    elem *a = zwrot(i-1);
+    elem *a = zwrot(i);
     if(a->pop) a->pop->nas = a->nas;
     else prz = a->nas;
     if(a->nas) a->nas->pop = a->pop;
