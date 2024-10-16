@@ -24,7 +24,7 @@ elem *lista::zwrot(int i) {
 
 elem *lista::dodprz(int i) {
     elem *a = new elem;
-    a->war=i;
+    a->war = i;
     a->nas = prz;
     a->pop = NULL;
     if(prz) prz->pop = a;
@@ -37,9 +37,9 @@ elem *lista::dodprz(int i) {
 elem *lista::dodtyl(int i) {
     elem *a = new elem;
     a->war = i;
-    if(tyl) tyl->nas = a;
     a->nas = NULL;
     a->pop = tyl;
+    if(tyl) tyl->nas = a;
     tyl = a;
     if(!prz) prz = tyl;
     roz++;
@@ -47,7 +47,7 @@ elem *lista::dodtyl(int i) {
 }
 
 elem *lista::dodind(int i, int j) {
-    if (j > roz) return NULL;
+    if (j < 1 || j > roz) return NULL;
     elem *a = new elem;
     a->war = i;
     elem *b = zwrot(j);

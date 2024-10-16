@@ -13,7 +13,7 @@ int main(int argc, char const *argv[]) {
     li.dodtyl(0);
     li.wyswietl();
     std::cout << "Dodanie do listy liczby 9 na drugie miejsce:\n";
-    li.dodind(9,2);
+    li.dodind(9, 2);
     li.wyswietl();
     std::cout << "Usuniecie z listy pierwszej liczby:\n";
     li.usuprz();
