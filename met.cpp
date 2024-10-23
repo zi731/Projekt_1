@@ -91,11 +91,9 @@ elem *lista::usutyl() {
     elem *a;
     if(tyl) {
         a = tyl;
-        if(a == prz) prz = tyl = NULL;
-        else {
-            tyl = tyl->pop;
-            tyl->nas = NULL;
-        };
+        tyl = tyl->pop;
+        if(!tyl) prz = NULL;
+        else tyl->nas = NULL;
         roz--;
         return a;
     }
