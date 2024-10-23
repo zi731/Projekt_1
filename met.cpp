@@ -1,12 +1,17 @@
+/// @file met.cpp Definicja metod listy
+
 #include "lis.h"
 #include <iostream>
 
+/// @brief Konstruktor listy
 lista::lista(void) {
     roz = 0;
     prz = NULL;
     tyl = NULL;
 }
 
+/// @brief Zwraca element o podanym indeksie
+/// @param i - Indeks elementu do zwrócenia
 elem *lista::zwrot(int i) {
     elem *a;
     if((i < 1) || (i > roz)) return NULL;
@@ -22,6 +27,8 @@ elem *lista::zwrot(int i) {
     }  
 }
 
+/// @brief Dodaje element na przód listy
+/// @param i - Wartość dodawanego elementu
 elem *lista::dodprz(int i) {
     elem *a = new elem;
     a->war = i;
@@ -34,6 +41,8 @@ elem *lista::dodprz(int i) {
     return prz;
 }
 
+/// @brief Dodaje element na tył listy
+/// @param i - Wartość dodawanego elementu
 elem *lista::dodtyl(int i) {
     elem *a = new elem;
     a->war = i;
@@ -46,6 +55,9 @@ elem *lista::dodtyl(int i) {
     return tyl;
 }
 
+/// @brief Dodaje element na podany indeks listy
+/// @param i - Wartość dodawanego elementu
+/// @param j - Indeks elementu
 elem *lista::dodind(int i, int j) {
     if (j < 1 || j > roz) return NULL;
     elem *a = new elem;
@@ -60,6 +72,7 @@ elem *lista::dodind(int i, int j) {
     return a;
 }
 
+/// @brief Usuwa element z przodu listy
 elem *lista::usuprz() {
     elem *a;
     if(prz) {
@@ -73,6 +86,7 @@ elem *lista::usuprz() {
     else return NULL;
 }
 
+/// @brief Usuwa element z tyłu listy
 elem *lista::usutyl() {
     elem *a;
     if(tyl) {
@@ -88,6 +102,8 @@ elem *lista::usutyl() {
     else return NULL;
 }
 
+/// @brief Usuwa element o podanym indeksie
+/// @param i - Indeks elementu
 elem *lista::usuind(int i) {
     elem *a = zwrot(i);
     if(a->pop) a->pop->nas = a->nas;
@@ -98,6 +114,7 @@ elem *lista::usuind(int i) {
     return a;
 }
 
+/// @brief Wypisuje wszystkie elementy listy
 void lista::wyswietl() {
     elem *a;
     if(!prz) std::cout << "BRAK" << std::endl;
@@ -111,6 +128,7 @@ void lista::wyswietl() {
     }
 }
 
+/// @brief Wypisuje wszystkie elementy listy, w odwrotnej kolejności
 void lista::odwrot() {
     elem *a;
     if(!prz) std::cout << "BRAK" << std::endl;
@@ -124,18 +142,23 @@ void lista::odwrot() {
     }
 }
 
+/// @brief Wypisuje wartość elementu o indeksie większym o 1 od podanego
+/// @param i - Indeks elementu
 void lista::zwrotnas(int i) {
     elem *a = new elem;
     a = zwrot(i + 1);
     std::cout << a->war << "\n";
 }
 
+/// @brief Wypisuje wartość elementu o indeksie miniejszym o 1 od podanego
+/// @param i - Indeks elementu
 void lista::zwrotpop(int i) {
     elem *a = new elem;
     a = zwrot(i - 1);
     std::cout << a->war << "\n";
 }
 
+/// @brief Wyczyszcza zawartość listy
 void lista::wyczy() {
     elem *a;
     while(prz) {

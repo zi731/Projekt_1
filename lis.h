@@ -1,14 +1,18 @@
+/// @file lis.h Deklaracja metod listy
+
+/// @brief Definicja pojedynczego elementu listy
 struct elem {
-    int war;
-    elem *nas;
-    elem *pop;
+    int war; ///< Wartość elementu
+    elem *nas; ///< Wskaźnik do następnego elementu
+    elem *pop; ///< Wskaźnik do poprzedniego elementu
 };
 
+///@brief Definicja listy, jej zmiennych i jej metod
 class lista {
 private:
-    int roz;
-    elem *prz;
-    elem *tyl;
+    int roz; ///< Rozmiar listy
+    elem *prz; ///< Element na przodzie listy
+    elem *tyl; ///< Element na tyle listy
 public:
     lista(void);
     ~lista() {}

@@ -1,7 +1,8 @@
+/// @file P1.cpp Plik główny
 #include "lis.h"
 #include <iostream>
 
-
+/// @brief Wywołanie metod listy
 int main(int argc, char const *argv[]) {
     lista li;
     std::cout << "Dodanie do listy liczb od 1 do 8:\n";
